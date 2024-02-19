@@ -1,6 +1,6 @@
 ## Kiwi's Roblox Shaders Installer
 
-*- This is currently in BETA -*
+*RELEASED* [Video Tutorial](https://youtu.be/0ia5Ar884gg?si=oSM2ntWzN6XmCtR5):
 
 ## What it does:
 *This program will include:*
