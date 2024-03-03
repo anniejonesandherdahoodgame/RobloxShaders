@@ -42,10 +42,24 @@ if "%2"=="firstrun" exit
 cls
 mode 65, 25
 
+:: Blxstrap
+if exist "%localappdata%\Bloxstrap\*" (
+for /d %%i in ("%localappdata%\Bloxstrap\*") do (
+if exist "%%i\ClientSettings" (
+    set folder=%%i
+)
+)
+) else if exist "%localappdata%\Roblox\Versions\*" (
 for /d %%i in ("%localappdata%\Roblox\Versions\*") do (
 if exist "%%i\RobloxPlayerBeta.exe" (
-    set rblxversion=%%i
-))
+    set folder=%%i
+)
+)
+) else (
+    echo Roblox not found, you either don't have it installed or have an unsupported directory.
+    pause
+    goto exit
+)
 
 goto realmain
 
